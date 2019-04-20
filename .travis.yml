@@ -1,16 +1,12 @@
 language: python
 python:
-- '2.7'
-- '3.3'
-- '3.4'
-- '3.5'
-- 3.5-dev
-- '3.6'
-- 3.6-dev
+  - '2.7'
+  - '3.4'
+  - '3.6'
 install:
-- pip install -r requirements.txt
+  - pip install -r requirements.txt
 script:
-- pytest -v
-- coverage run -m pytest
+  - pytest -v
+  - coverage run -m pytest
 after_success:
   - codecov
