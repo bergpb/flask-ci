@@ -1,8 +1,7 @@
 ## Flask app with CI integration.
 
-![Travis (.org)](https://img.shields.io/travis/bergpb/flask-ci-test.svg)
+[![Build Status](https://travis-ci.com/bergpb/flask-ci.svg?branch=master)](https://travis-ci.com/bergpb/flask-ci)
 [![codecov](https://codecov.io/gh/bergpb/flask-ci-test/branch/master/graph/badge.svg)](https://codecov.io/gh/bergpb/flask-ci-test)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0759b8c0a1d411291aad485408ba1c0)](https://www.codacy.com/app/bergpb/flask-ci-test?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bergpb/flask-ci-test&amp;utm_campaign=Badge_Grade)
 
 
 #### A simple Flask app with continuous integration config (Travis and CircleCI).
