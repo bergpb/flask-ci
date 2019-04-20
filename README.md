@@ -5,6 +5,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0759b8c0a1d411291aad485408ba1c0)](https://www.codacy.com/app/bergpb/flask-ci-test?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bergpb/flask-ci-test&amp;utm_campaign=Badge_Grade)
 
 
+#### A simple Flask app with continuous integration config (Travis and CircleCI).
+
+
 1. Install dependencies: ```pipenv install```
 2. Running tests: ```pytest -v```
 3. Run Coverage: ```coverage run app.py```
