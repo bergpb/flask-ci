@@ -6,7 +6,6 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - pytest -v
-  - coverage run -m pytest
+  - pytest --cov=./
 after_success:
   - codecov

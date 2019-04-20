@@ -13,6 +13,7 @@ coverage = "*"
 pytest = "*"
 python-dotenv = "*"
 codecov = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.7"
