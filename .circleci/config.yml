@@ -18,6 +18,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Installing dependencies
+          command: pip install -r requirements.txt
+      - run:
           name: Running tests
           command: coverage run -m pytest && coverage xml
       - run:
