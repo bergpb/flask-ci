@@ -15,6 +15,7 @@ python-dotenv = "*"
 codecov = "*"
 codacy-coverage = "*"
 tox = "*"
+python-coveralls = "*"
 
 [requires]
 python_version = "3.7"

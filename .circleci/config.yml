@@ -23,7 +23,7 @@ jobs:
           command: tox
       - run:
           name: Uploading test report
-          command: codecov && python-codacy-coverage -r coverage.xml
+          command: codecov && python-codacy-coverage -r coverage.xml && coveralls
 workflows:
   version: 2
   build_and_test:
