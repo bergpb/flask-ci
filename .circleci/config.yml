@@ -13,11 +13,11 @@ jobs:
           pip install -r requirements.txt
   test:
     - run:
-      command: |
-        coverage run -m pytest && coverage xml
+        command: |
+          coverage run -m pytest && coverage xml
     - run:
-      command: |
-        codecov && python-codacy-coverage -r coverage.xml
+        command: |
+          codecov && python-codacy-coverage -r coverage.xml
   workflows:
     version: 2
     build_and_test:
