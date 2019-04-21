@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/flask-ci-test
     docker:
-      - image: circleci/python:3.6.4
+      - image: themattrix/tox
     steps:
       - checkout
       - run: sudo chown -R circleci:circleci /usr/local/bin
@@ -14,7 +14,7 @@ jobs:
   test:
     working_directory: ~/flask-ci-test
     docker:
-      - image: circleci/python:3.6.4
+      - image: themattrix/tox
     steps:
       - checkout
       - run: sudo chown -R circleci:circleci /usr/local/bin
