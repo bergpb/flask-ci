@@ -23,10 +23,10 @@ jobs:
           name: Uploading test report
           command: codecov && python-codacy-coverage -r coverage.xml
 workflows:
-  version: 3
+  version: 2
   build_and_test:
     jobs:
       - build
-      - test
-        requires:
-          - build
+      - test:
+          requires:
+            - build
