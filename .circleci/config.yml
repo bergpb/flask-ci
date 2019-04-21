@@ -12,6 +12,7 @@ jobs:
           name: Installing dependencies
           command: pip install -r requirements.txt
   test:
+    working_directory: ~/flask-ci-test
     docker:
       - image: circleci/python:3.6.4
     steps:
