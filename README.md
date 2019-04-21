@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/bergpb/flask-ci/branch/master/graph/badge.svg)](https://codecov.io/gh/bergpb/flask-ci)
 [![Coverage Status](https://coveralls.io/repos/github/bergpb/flask-ci/badge.svg?branch=master)](https://coveralls.io/github/bergpb/flask-ci?branch=master)
 
-### A simple Flask app with continuous integration config (Travis and CircleCI)
+### A simple Flask app with continuous integration config (Travis, CircleCI, Codacy and Coveralls)
 
 Installing and running:
 1.  Install dependencies: ```pipenv install```
