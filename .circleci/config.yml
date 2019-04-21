@@ -23,8 +23,8 @@ jobs:
           name: Installing dependencies
           command: pip install -r requirements.txt
       - run:
-          name: Running tests
-          command: coverage run -m pytest && coverage xml
+          name: Running tests with tox
+          command: tox
       - run:
           name: Uploading test report
           command: codecov && python-codacy-coverage -r coverage.xml

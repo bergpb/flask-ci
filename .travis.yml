@@ -4,8 +4,9 @@ python:
   - '3.6'
 install:
   - pip install -r requirements.txt
+  - pip install tox-travis
 script:
-  - coverage run -m pytest && coverage xml
+  - tox
 after_success:
   - codecov
   - python-codacy-coverage -r coverage.xml
