@@ -15,6 +15,6 @@ Installing and running:
 
 Or command by command:
 1.  Running tests: ```pytest -v```
-2.  Run Coverage: ```coverage run app.py```
+2.  Run Coverage: ```coverage run -m pytest```
 3.  Show report: ```coverage report```
 4.  Create html page from report: ```coverage html```
