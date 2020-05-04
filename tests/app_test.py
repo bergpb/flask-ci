@@ -1,4 +1,4 @@
-from tests import client
+from . import client
 
 
 def test_index_return_200(client):
