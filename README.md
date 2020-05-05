@@ -10,12 +10,16 @@
 
 ### A simple Flask app with continuous integration config (Travis, CircleCI, Codacy and Coveralls)
 
-Installing and running:
+
+
+Running app:
+1.  Install dependencies: ```pipenv install```
+2.  Start flask app: ```flask run```
+
+Running tests (with tox):
 1.  Install dependencies: ```pipenv install```
 2.  Running all tests and coverage: ```tox```
 
-Or command by command:
-1.  Running tests: ```pytest -v```
-2.  Run Coverage: ```coverage run -m pytest```
-3.  Show report: ```coverage report```
-4.  Create html page from report: ```coverage html```
+Running tests (with make):
+1.  Running tests: ```make test```
+2.  Run Coverage: ```make coverage```
