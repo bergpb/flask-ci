@@ -1,0 +1,30 @@
+pipeline:
+  prepare:
+    image: python:3.11-alpine
+    commands:
+      - python3 -m venv .venv
+
+  install-dependencies:
+    image: python:3.11-alpine
+    environment:
+      VENV_PATH: .venv
+      PYTHON_INTERPRETER: "${VENV_PATH}/bin/python3"
+    commands:
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+
+  test:
+    image: python:3.11-alpine
+    environment:
+      VENV_PATH: .venv
+      PYTHON_INTERPRETER: "${VENV_PATH}/bin/python3"
+    commands:
+      - make test
+
+  coverage:
+    image: python:3.11-alpine
+    environment:
+      VENV_PATH: .venv
+      PYTHON_INTERPRETER: "${VENV_PATH}/bin/python3"
+    commands:
+      - make coverage
