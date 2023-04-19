@@ -2,6 +2,8 @@ pipeline:
   prepare:
     image: python:3.11-alpine
     commands:
+      - apk update
+      - apk install make
       - python3 -m venv .venv
 
   install-dependencies:
