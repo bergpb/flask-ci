@@ -2,8 +2,6 @@ pipeline:
   prepare:
     image: python:3.11-alpine
     commands:
-      - apk update
-      - apk add make
       - python3 -m venv .venv
 
   install-dependencies:
@@ -21,6 +19,7 @@ pipeline:
       VENV_PATH: .venv
       PYTHON_INTERPRETER: "${VENV_PATH}/bin/python3"
     commands:
+      - apk update && apk add make
       - make test
 
   coverage:
@@ -29,4 +28,5 @@ pipeline:
       VENV_PATH: .venv
       PYTHON_INTERPRETER: "${VENV_PATH}/bin/python3"
     commands:
+      - apk update && apk add make
       - make coverage
