@@ -6,24 +6,21 @@ pipeline:
 
   install-dependencies:
     image: python:3.11-alpine
-    environment:
-      - PATH=.venv/bin:$PATH
     commands:
+      - . .venv/bin/activate
       - pip install --upgrade pip
       - pip install -r requirements.txt
 
   test:
     image: python:3.11-alpine
-    environment:
-      - PATH=.venv/bin:$PATH
     commands:
-      - apk update && apk add make
-      - make test
+      - . .venv/bin/activate
+      - pytest -vv
 
   coverage:
     image: python:3.11-alpine
-    environment:
-      - PATH=.venv/bin:$PATH
     commands:
-      - apk update && apk add make
-      - make coverage
+      - . .venv/bin/activate
+      - coverage run -m pytest
+      - coverage report
+      - coverage xml
